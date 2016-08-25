@@ -74,8 +74,7 @@ PRODUCT_PACKAGES += \
     qcrilhook \
     liblge \
     libHevcSwDecoder \
-    libtime_genoff \
-    charger_res_images
+    libtime_genoff
 
 # Ramdisk
 PRODUCT_PACKAGES += \
