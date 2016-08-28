@@ -104,10 +104,8 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_THEME := portrait_hdpi
 
 # Charger
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/lge/d851/charger/images
-COMMON_GLOBAL_CFLAGS += \
-    -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' \
-    -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
+BOARD_CHARGING_CMDLINE_NAME := "androidboot.mode"
+BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/lge/d851/cmhw
