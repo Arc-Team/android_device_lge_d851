@@ -15,8 +15,6 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/d851/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=g3 user_debug=31 msm_rtb.filter=0x0 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -24,19 +22,19 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x0008000 --ramdisk_offset 0x2000000
 TARGET_KERNEL_CONFIG := d851_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/g3
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.3
+TARGET_KERNEL_CROSS_COMPILE_PREFIX :=
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
-USE_CUSTOM_AUDIO_POLICY := 1
+USE_CUSTOM_AUDIO_POLICY := 0
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/d851/bluetooth/vnd_g3.txt
+BOARD_CUSTOM_BT_CONFIG := device/lge/d851/bluetooth/vnd_g3.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d851/bluetooth
 
 # Display
@@ -115,7 +113,7 @@ BOARD_HARDWARE_CLASS := device/lge/d851/cmhw
 BOARD_NFC_CHIPSET := pn547
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := true
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -139,5 +137,5 @@ TARGET_SPECIFIC_HEADER_PATH := device/lge/d851/include
 BOARD_RIL_CLASS += ../../../device/lge/d851/ril
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/lge/d851/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += device/lge/d851/sepolicy

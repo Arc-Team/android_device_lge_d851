@@ -147,9 +147,10 @@ static char *camera_fixup_getparams(int id, const char *settings)
         videoMode = (!strcmp(params.get(android::CameraParameters::KEY_RECORDING_HINT), "true"));
     }
 
+    /* 
     params.set(android::CameraParameters::KEY_SUPPORTED_ISO_MODES, iso_values[id]);
 
-    /* lge-iso to iso */
+     lge-iso to iso
     if(params.get(android::CameraParameters::KEY_LGE_ISO_MODE)) {
         isoMode = params.get(android::CameraParameters::KEY_LGE_ISO_MODE);
         ALOGV("%s: ISO mode: %s", __FUNCTION__, isoMode);
@@ -191,7 +192,7 @@ static char *camera_fixup_getparams(int id, const char *settings)
         } else if(strcmp(isoMode, "2700") == 0) {
             params.set(android::CameraParameters::KEY_ISO_MODE, "ISO2700");
         }
-    }
+    } */
 
     /* Set supported scene modes */
     if (!videoMode) {
@@ -239,7 +240,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.dump();
 #endif
 
-    params.set(android::CameraParameters::KEY_LGE_CAMERA, (id == 0 && is4k(params)) ? "1" : "0");
+    //params.set(android::CameraParameters::KEY_LGE_CAMERA, (id == 0 && is4k(params)) ? "1" : "0");
 
     if (params.get(android::CameraParameters::KEY_RECORDING_HINT)) {
         videoMode = (!strcmp(params.get(android::CameraParameters::KEY_RECORDING_HINT), "true"));
@@ -251,7 +252,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
         params.set("hdr-mode", "0");
     }
 
-    /* iso to lge-iso */
+    /* iso to lge-iso 
     if(params.get(android::CameraParameters::KEY_ISO_MODE)) {
         isoMode = params.get(android::CameraParameters::KEY_ISO_MODE);
         ALOGV("%s: ISO mode: %s", __FUNCTION__, isoMode);
@@ -295,7 +296,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
         } else if(strcmp(isoMode, "ISO2700") == 0) {
             params.set(android::CameraParameters::KEY_LGE_ISO_MODE, "2700");
         }
-    }
+    }*/
 
     if (!strcmp(params.get("zsl"), "on")) {
         if (previewRunning && !zslState) { flipZsl = true; }

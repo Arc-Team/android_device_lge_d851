@@ -1,2 +1,3 @@
+add_lunch_combo aosp_d851-userdebug
 add_lunch_combo cm_d851-userdebug
 add_lunch_combo pac_d851-userdebug

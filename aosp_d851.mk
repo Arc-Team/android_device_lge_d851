@@ -3,10 +3,10 @@
 $(call inherit-product, device/lge/d851/d851.mk)
 
 # CM Stuff
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+#$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+#$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Release Name
 PRODUCT_RELEASE_NAME := d851
@@ -16,7 +16,7 @@ TARGET_BOOTANIMATION_NAME := 1440
 
 # Device Naming
 PRODUCT_DEVICE := d851
-PRODUCT_NAME := cm_d851
+PRODUCT_NAME := aosp_d851
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-D851
 PRODUCT_MANUFACTURER := LGE
