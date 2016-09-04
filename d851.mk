@@ -103,6 +103,12 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libxml2
 
+# Default Properties
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    ro.adb.secure=0
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
