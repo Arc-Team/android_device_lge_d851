@@ -51,12 +51,10 @@ persist.radio.add_power_save=1
 persist.radio.apm_sim_not_pwdn=1
 persist.telephony.oosisdc=false
 ril.subscription.types=NV,RUIM
-rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 ro.ril.telephony.mqanelements=5
 ro.telephony.call_ring.multiple=0
 ro.telephony.default_network=9
-ro.telephony.ril_class=LgeLteRIL
 ro.use_data_netmgrd=true
 telephony.lteOnGsmDevice=1
 

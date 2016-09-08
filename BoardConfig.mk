@@ -144,7 +144,7 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/d851/overlay
 TARGET_SPECIFIC_HEADER_PATH := device/lge/d851/include
 
 # RIL
-BOARD_RIL_CLASS += ../../../device/lge/d851/ril
+TARGET_RIL_VARIANT := caf
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk

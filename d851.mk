@@ -72,7 +72,6 @@ PRODUCT_PACKAGES += \
     shutdownlistener \
     qcnvitems \
     qcrilhook \
-    liblge \
     libHevcSwDecoder \
     libtime_genoff
 
@@ -214,31 +213,21 @@ PRODUCT_COPY_FILES += \
 
 # Qualcomm framework
 PRODUCT_COPY_FILES += \
-    device/lge/d851/prebuilt/bin/irsc_util:system/bin/irsc_util \
-    device/lge/d851/prebuilt/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
-    device/lge/d851/prebuilt/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
-    device/lge/d851/prebuilt/vendor/lib/libdsutils.so:system/vendor/lib/libdsutils.so \
-    device/lge/d851/prebuilt/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
-    device/lge/d851/prebuilt/vendor/lib/libqcci_legacy.so:system/vendor/lib/libqcci_legacy.so \
-    device/lge/d851/prebuilt/vendor/lib/libqdi.so:system/vendor/lib/libqdi.so \
-    device/lge/d851/prebuilt/vendor/lib/libqdp.so:system/vendor/lib/libqdp.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi.so:system/vendor/lib/libqmi.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi_cci.so:system/vendor/lib/libqmi_cci.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi_client_qmux.so:system/vendor/lib/libqmi_client_qmux.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi_common_so.so:system/vendor/lib/libqmi_common_so.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi_csi.so:system/vendor/lib/libqmi_csi.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi_csvt_srvc.so:system/vendor/lib/libqmi_csvt_srvc.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so \
-    device/lge/d851/prebuilt/vendor/lib/libqmiservices.so:system/vendor/lib/libqmiservices.so
+    device/lge/d851/prebuilt/bin/irsc_util:system/bin/irsc_util
 
 # Radio
 PRODUCT_COPY_FILES += \
     device/lge/d851/prebuilt/bin/netmgrd:system/bin/netmgrd \
     device/lge/d851/prebuilt/bin/qmuxd:system/bin/qmuxd \
+    device/lge/d851/prebuilt/bin/radish:system/bin/radish \
     device/lge/d851/prebuilt/bin/rfs_access:system/bin/rfs_access \
     device/lge/d851/prebuilt/bin/rmt_storage:system/bin/rmt_storage \
+    device/lge/d851/prebuilt/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
+    device/lge/d851/prebuilt/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
+    device/lge/d851/prebuilt/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
+    device/lge/d851/prebuilt/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     device/lge/d851/prebuilt/lib/libmdmdetect.so:system/lib/libmdmdetect.so \
-    device/lge/d851/prebuilt/lib/libril.so:system/lib/libril.so \
+    device/lge/d851/prebuilt/lib/librmnetctl.so:system/lib/librmnetctl.so \
     device/lge/d851/prebuilt/lib/libuicc.so:system/lib/libuicc.so \
     device/lge/d851/prebuilt/lib/libvss_common_idl.so:system/lib/libvss_common_idl.so \
     device/lge/d851/prebuilt/lib/libvss_common_iface.so:system/lib/libvss_common_iface.so \
@@ -246,10 +235,29 @@ PRODUCT_COPY_FILES += \
     device/lge/d851/prebuilt/lib/libvss_nv_iface.so:system/lib/libvss_nv_iface.so \
     device/lge/d851/prebuilt/vendor/lib/libcneapiclient.so:system/vendor/lib/libcneapiclient.so \
     device/lge/d851/prebuilt/vendor/lib/libconfigdb.so:system/vendor/lib/libconfigdb.so \
+    device/lge/d851/prebuilt/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
+    device/lge/d851/prebuilt/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
+    device/lge/d851/prebuilt/vendor/lib/libdsutils.so:system/vendor/lib/libdsutils.so \
+    device/lge/d851/prebuilt/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
+    device/lge/d851/prebuilt/vendor/lib/liblqe.so:system/vendor/lib/liblqe.so \
     device/lge/d851/prebuilt/vendor/lib/libnetmgr.so:system/vendor/lib/libnetmgr.so \
     device/lge/d851/prebuilt/vendor/lib/libperipheral_client.so:system/vendor/lib/libperipheral_client.so \
+    device/lge/d851/prebuilt/vendor/lib/libqdi.so:system/vendor/lib/libqdi.so \
+    device/lge/d851/prebuilt/vendor/lib/libqdp.so:system/vendor/lib/libqdp.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi.so:system/vendor/lib/libqmi.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_cci.so:system/vendor/lib/libqmi_cci.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_client_helper.so:system/vendor/lib/libqmi_client_helper.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_client_qmux.so:system/vendor/lib/libqmi_client_qmux.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_common_so.so:system/vendor/lib/libqmi_common_so.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_csi.so:system/vendor/lib/libqmi_csi.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_csi.so:system/vendor/lib/libqmi_csi.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so \
+    device/lge/d851/prebuilt/vendor/lib/libqmiservices.so:system/vendor/lib/libqmiservices.so \
     device/lge/d851/prebuilt/vendor/lib/libril-qc-qmi-1.so:system/vendor/lib/libril-qc-qmi-1.so \
-    device/lge/d851/prebuilt/vendor/lib/libril-qcril-hook-oem.so:system/vendor/lib/libril-qcril-hook-oem.so
+    device/lge/d851/prebuilt/vendor/lib/libril-qcril-hook-oem.so:system/vendor/lib/libril-qcril-hook-oem.so \
+    device/lge/d851/prebuilt/vendor/lib/libsmemlog.so:system/vendor/lib/libsmemlog.so \
+    device/lge/d851/prebuilt/vendor/lib/libsystem_health_mon.so:system/vendor/lib/libsystem_health_mon.so \
+    device/lge/d851/prebuilt/vendor/lib/libxml.so:system/vendor/lib/libxml.so
 
 # Venus firmware
 PRODUCT_COPY_FILES += \
@@ -445,16 +453,6 @@ PRODUCT_COPY_FILES += \
 # Perf
 PRODUCT_COPY_FILES += \
     device/lge/d851/prebuilt/vendor/lib/libqti-perfd-client.so:system/vendor/lib/libqti-perfd-client.so
-
-# Radio
-PRODUCT_COPY_FILES += \
-    device/lge/d851/prebuilt/bin/radish:system/bin/radish \
-    device/lge/d851/prebuilt/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
-    device/lge/d851/prebuilt/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
-    device/lge/d851/prebuilt/lib/librmnetctl.so:system/lib/librmnetctl.so \
-    device/lge/d851/prebuilt/vendor/lib/libsmemlog.so:system/vendor/lib/libsmemlog.so \
-    device/lge/d851/prebuilt/vendor/lib/libsystem_health_mon.so:system/vendor/lib/libsystem_health_mon.so \
-    device/lge/d851/prebuilt/vendor/lib/libxml.so:system/vendor/lib/libxml.so
 
 # WCNSS
 PRODUCT_COPY_FILES += \

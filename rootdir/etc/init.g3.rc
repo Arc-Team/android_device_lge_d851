@@ -6,8 +6,6 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export LD_SHIM_LIBS /system/lib/libril.so|liblge.so
-
     mkdir /persist 0771 system system
     mkdir /persist-lg 0771 system system
     mkdir /sns 0755 system system
