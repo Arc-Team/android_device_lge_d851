@@ -420,6 +420,8 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 
 service netmgrd /system/bin/netmgrd
     class main
+    user root
+    group radio
 
 service p2p_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
@@ -465,9 +467,9 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     oneshot
 
 service qmuxd /system/bin/qmuxd
-    class core
+    class main
     user radio
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps diag qcom_diag
 
 service rmt_storage /system/bin/rmt_storage
     class core

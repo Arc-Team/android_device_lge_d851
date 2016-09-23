@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
 # Radio
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
+    librmnetctl \
     libxml2
 
 # Default Properties
@@ -227,7 +228,6 @@ PRODUCT_COPY_FILES += \
     device/lge/d851/prebuilt/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
     device/lge/d851/prebuilt/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     device/lge/d851/prebuilt/lib/libmdmdetect.so:system/lib/libmdmdetect.so \
-    device/lge/d851/prebuilt/lib/librmnetctl.so:system/lib/librmnetctl.so \
     device/lge/d851/prebuilt/lib/libuicc.so:system/lib/libuicc.so \
     device/lge/d851/prebuilt/lib/libvss_common_idl.so:system/lib/libvss_common_idl.so \
     device/lge/d851/prebuilt/lib/libvss_common_iface.so:system/lib/libvss_common_iface.so \
