@@ -65,7 +65,6 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    LGDoze \
     Snap \
     TimeService \
     qcrilmsgtunnel \
