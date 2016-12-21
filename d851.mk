@@ -66,13 +66,10 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     Snap \
+    libtime_genoff \
     TimeService \
-    qcrilmsgtunnel \
     shutdownlistener \
-    qcnvitems \
-    qcrilhook \
-    libHevcSwDecoder \
-    libtime_genoff
+    qcrilmsgtunnel
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -226,6 +223,8 @@ PRODUCT_COPY_FILES += \
     device/lge/d851/prebuilt/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     device/lge/d851/prebuilt/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
     device/lge/d851/prebuilt/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+    device/lge/d851/prebuilt/framework/qcnvitems.jar:system/framework/qcnvitems.jar \
+    device/lge/d851/prebuilt/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     device/lge/d851/prebuilt/lib/libmdmdetect.so:system/lib/libmdmdetect.so \
     device/lge/d851/prebuilt/lib/libuicc.so:system/lib/libuicc.so \
     device/lge/d851/prebuilt/lib/libvss_common_idl.so:system/lib/libvss_common_idl.so \
