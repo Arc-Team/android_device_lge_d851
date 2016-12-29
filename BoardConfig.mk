@@ -112,7 +112,7 @@ BOARD_CHARGING_CMDLINE_NAME := "androidboot.mode"
 BOARD_CHARGING_CMDLINE_VALUE := "chargerlogo"
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/lge/d851/cmhw
+BOARD_HARDWARE_CLASS += device/lge/d851/cmhw
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
@@ -136,7 +136,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 DEVICE_PACKAGE_OVERLAYS += device/lge/d851/overlay
 
 # Includes
-TARGET_SPECIFIC_HEADER_PATH := device/lge/d851/include
+TARGET_SPECIFIC_HEADER_PATH += device/lge/d851/include
 
 # RIL
 COMMON_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
